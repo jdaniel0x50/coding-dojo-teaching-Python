@@ -1,0 +1,16 @@
+# File Extensions
+*.vscode
+
+*.docx
+*.doc
+*.pyc
+
+# Directories
+01_Fundamentals/
+flaskEnv/
+djangoEnv/
+Include/
+Lib/
+Scripts/
+tcl/
+pip-selfcheck.json
