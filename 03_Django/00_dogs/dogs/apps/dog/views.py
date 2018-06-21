@@ -6,6 +6,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, "dog/index.html")
 
+def myview(request):
+    return render(request, "dog/newpage.html")
+
 def single_dog(request, id):
     context = {
         "id": id,

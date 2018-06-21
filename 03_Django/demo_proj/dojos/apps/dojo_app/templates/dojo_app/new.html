@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Dojo</title>
+</head>
+<body>
+    <h1>New Dojo</h1>
+    <form action="/dojos/create" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <label>Name</label>
+            <input name="name" type="text">
+        </div>
+        <div class="row">
+            <ul>
+                {% for e in errors %}
+                    {% if e.label == "name" %}
+                        <li>{{e.message}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+            <label>City</label>
+            <input name="city" type="text">
+        </div>
+        <div class="row">
+            <ul>
+                {% for e in errors %}
+                    {% if e.label == "city" %}
+                        <li>{{e.message}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+            <label>State</label>
+            <input name="state" type="text">
+        </div>
+        <div class="row">
+            <ul>
+                {% for e in errors %}
+                    {% if e.label == "state" %}
+                        <li>{{e.message}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    
+    </form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-"""dogs URL Configuration
+"""dojos URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -17,8 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^dog', include('apps.dog.urls', namespace="dogs")),
-    url(r'^people/', include('apps.people.urls', namespace="people")),
+    url(r'^users', include('apps.users.urls')),
+    url(r'^dojos', include('apps.dojo_app.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.home.urls', namespace="home")),
 ]

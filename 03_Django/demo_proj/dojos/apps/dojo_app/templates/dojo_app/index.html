@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Dojos</title>
+</head>
+<body>
+    <h1>All Dojos</h1>
+    <table>
+        <thead>
+            <th>
+                Dojo Name
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                Action
+            </th>
+        </thead>
+        {% for dojo in dojos %}
+        <tr>
+            <td>{{dojo.name}}</td>
+            <td>{{dojo.city}}</td>
+            <td>{{dojo.state}}</td>
+            <td>
+                <a href="some_link">APPLY</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
